@@ -6,3 +6,6 @@
 .subHero.cleaningHero{background-image:linear-gradient(90deg,rgba(4,14,25,.78) 0%,rgba(4,14,25,.42) 42%,rgba(4,14,25,.08) 72%),url("images/sprzatanie-krosno-hero.jpg");background-size:cover;background-position:center}
 
 .breadcrumbs{padding:14px 0;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}.breadcrumbs a{font-weight:700;color:var(--blue)}
+
+.subHero.gutterHero{background-image:linear-gradient(90deg,rgba(4,14,25,.82) 0%,rgba(4,14,25,.45) 45%,rgba(4,14,25,.10) 75%),url("images/czyszczenie-rynien-krosno-hero.png");background-size:cover;background-position:center}
+.subHero.pavingHero{background-image:linear-gradient(90deg,rgba(4,14,25,.82) 0%,rgba(4,14,25,.43) 45%,rgba(4,14,25,.08) 75%),url("images/mycie-kostki-krosno-hero.png");background-size:cover;background-position:center}
