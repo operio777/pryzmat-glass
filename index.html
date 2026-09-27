@@ -6,6 +6,15 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-3W2B2K7RCH');
+  document.addEventListener('click', function (event) {
+    const phoneLink = event.target.closest('a[href^="tel:"]');
+    if (!phoneLink) return;
+    gtag('event', 'phone_click', {
+      phone_number: phoneLink.getAttribute('href').replace('tel:', ''),
+      page_location: window.location.href,
+      link_text: phoneLink.textContent.trim()
+    });
+  });
 </script>
 </head><body>
 <header class="top"><a class="brand" href="#start"><img src="assets/images/logo.jpg" alt="Pryzmat Glass"></a><button class="menu" aria-label="Menu">☰</button><nav><a href="#uslugi">Usługi</a><a href="#realizacje">Realizacje</a><a href="#obszar">Obszar działania</a><a href="#kontakt">Kontakt</a></nav><a class="phone" href="tel:+48535937367">535 937 367</a></header>
