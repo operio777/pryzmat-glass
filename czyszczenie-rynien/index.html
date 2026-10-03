@@ -20,7 +20,7 @@
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-3W2B2K7RCH');gtag('config','AW-18460273766');
-document.addEventListener('click',function(event){const phoneLink=event.target.closest('a[href^="tel:"]');if(!phoneLink)return;gtag('event','phone_click',{phone_number:phoneLink.getAttribute('href').replace('tel:',''),page_location:window.location.href,link_text:phoneLink.textContent.trim()});});
+document.addEventListener('click',function(event){const phoneLink=event.target.closest('a[href^="tel:"]');if(!phoneLink)return;if(typeof gtag!=='function')return;gtag('event','phone_click',{phone_number:phoneLink.getAttribute('href').replace('tel:',''),page_location:window.location.href,link_text:phoneLink.textContent.trim()});if(event.isTrusted){gtag('event','conversion',{send_to:'AW-18460273766/7fAVCMOn3I8dEObYxeJE'});}});
 </script>
 </head>
 <body>
