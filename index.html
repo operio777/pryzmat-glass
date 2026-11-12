@@ -11,6 +11,11 @@
     const phoneLink = event.target.closest('a[href^="tel:"]');
     if (!phoneLink) return;
     if (typeof gtag !== 'function') return;
+    gtag('event', 'click_to_call', {
+      link_url: phoneLink.getAttribute('href'),
+      link_text: phoneLink.textContent.trim(),
+      page_location: window.location.href
+    });
     gtag('event', 'phone_click', {
       phone_number: phoneLink.getAttribute('href').replace('tel:', ''),
       page_location: window.location.href,
@@ -111,6 +116,13 @@ const form=document.getElementById('request-form'),frame=document.getElementById
 let pending=false;
 form.addEventListener('submit',function(){pending=true;button.disabled=true;status.textContent='Wysyłanie zgłoszenia…';});
 frame.addEventListener('load',function(){if(!pending)return;pending=false;button.disabled=false;status.textContent='Formularz został przekazany do obsługi. Jeśli nie otrzymasz odpowiedzi, zadzwoń pod 535 937 367.';form.reset();});
+// Zdarzenie generate_lead wymaga potwierdzenia sukcesu z Apps Script.
+// Samo zaladowanie iframe nie potwierdza wyslania e-maila.
+window.addEventListener('message',function(event){
+  if(event.origin!=='https://script.google.com' && event.origin!=='https://script.googleusercontent.com')return;
+  if(!event.data || event.data.type!=='pryzmat_form_success')return;
+  if(typeof gtag==='function')gtag('event','generate_lead',{method:'contact_form'});
+});
 })();
 </script>
 </section>
