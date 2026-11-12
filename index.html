@@ -78,5 +78,41 @@
 <div class="reviews-extra"><p><strong>Opinie także w Oferteo:</strong> 5,0 ★ · 14 opinii klientów</p><a class="textLink" href="https://www.oferteo.pl/pryzmatglass/firma/3871921" target="_blank" rel="noopener noreferrer">Zobacz opinie w Oferteo →</a></div>
 </section>
 <section id="obszar" class="area wrap"><p class="eyebrow blue">OBSZAR DZIAŁANIA</p><h2>Jesteśmy blisko.</h2><div class="cities"><span><a href="mycie-okien-krosno/">Krosno</a></span><span>Jasło</span><span>Gorlice</span><span>Grybów</span><span><a href="mycie-okien-nowy-sacz/">Nowy Sącz</a></span><span><a href="mycie-okien-rzeszow/">Rzeszów</a></span></div><p>Obsługujemy zlecenia na wskazanym obszarze i w jego okolicach. Sprawdź lokalne oferty: <a class="textLink" href="mycie-okien-krosno/">mycie okien Krosno →</a> i <a class="textLink" href="mycie-okien-nowy-sacz/">mycie okien Nowy Sącz →</a> oraz <a class="textLink" href="mycie-okien-rzeszow/">mycie okien Rzeszów →</a>. Przy większych realizacjach zakres dojazdu ustalamy indywidualnie.</p></section>
+<style>
+.request-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.request-form label{display:flex;flex-direction:column;gap:7px;font-weight:650;font-size:14px}
+.request-form input,.request-form select,.request-form textarea{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #ccd5e0;border-radius:9px;font:inherit;background:#fff;color:#172337}
+.request-form input:focus,.request-form select:focus,.request-form textarea:focus{outline:2px solid #3159a6;outline-offset:1px}
+.request-form .wide{grid-column:1/-1}
+.request-form button{cursor:pointer;border:0}
+.request-form .honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.request-note{font-size:13px;line-height:1.5;opacity:.85}
+@media(max-width:650px){.request-form{grid-template-columns:1fr}}
+</style>
+<section class="wrap" id="formularz" aria-labelledby="formularz-title" style="padding-top:64px;padding-bottom:64px">
+<p class="eyebrow blue">ZGŁOSZENIE ONLINE</p><h2 id="formularz-title">Wyślij zapytanie o wycenę.</h2>
+<p>Wypełnij formularz — oddzwonimy lub odpowiemy na e-mail. Nie musisz otwierać programu pocztowego.</p>
+<form class="request-form" id="request-form" method="POST" action="https://script.google.com/macros/s/AKfycbwnBklaG6JYhsTq2gUDL-u3rOyIJ3OiNV3VYitHNVyZTEN9QL8fhOZYcJyn-UZ7VEuBCQ/exec" target="request-form-target">
+<label>Imię i nazwisko *<input name="name" autocomplete="name" maxlength="120" required></label>
+<label>Telefon *<input name="phone" type="tel" autocomplete="tel" maxlength="35" required></label>
+<label>E-mail (opcjonalnie)<input name="email" type="email" autocomplete="email" maxlength="200"></label>
+<label>Rodzaj usługi<select name="service"><option value="">Wybierz usługę</option><option>Mycie okien i witryn</option><option>Mycie elewacji</option><option>Mycie kostki brukowej</option><option>Czyszczenie rynien</option><option>Sprzątanie biur i lokali</option><option>Sprzątanie pobudowlane</option><option>Inna usługa</option></select></label>
+<label class="wide">Miejscowość<input name="city" autocomplete="address-level2" maxlength="120"></label>
+<label class="wide">Opis zlecenia *<textarea name="message" rows="5" maxlength="3000" placeholder="Co należy wyczyścić? Podaj orientacyjną powierzchnię, liczbę okien lub inne szczegóły." required></textarea></label>
+<div class="honeypot" aria-hidden="true"><label>Strona internetowa<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<label class="wide" style="flex-direction:row;align-items:flex-start;font-weight:400"><input type="checkbox" required style="width:auto;margin-top:5px"><span>Wyrażam zgodę na kontakt w sprawie mojego zapytania. Administratorem podanych danych jest Pryzmat Glass. *</span></label>
+<div class="wide"><button class="primary black" type="submit" id="request-submit">Wyślij zgłoszenie →</button></div>
+<p class="wide request-note" id="request-status" role="status" aria-live="polite">Dane zostaną wykorzystane wyłącznie do obsługi zapytania. Nie podawaj informacji wrażliwych.</p>
+</form>
+<iframe name="request-form-target" id="request-form-target" title="Wysyłanie zgłoszenia" style="display:none"></iframe>
+<script>
+(function(){
+const form=document.getElementById('request-form'),frame=document.getElementById('request-form-target'),status=document.getElementById('request-status'),button=document.getElementById('request-submit');
+let pending=false;
+form.addEventListener('submit',function(){pending=true;button.disabled=true;status.textContent='Wysyłanie zgłoszenia…';});
+frame.addEventListener('load',function(){if(!pending)return;pending=false;button.disabled=false;status.textContent='Formularz został przekazany do obsługi. Jeśli nie otrzymasz odpowiedzi, zadzwoń pod 535 937 367.';form.reset();});
+})();
+</script>
+</section>
 <section id="kontakt" class="contact"><div class="wrap contactGrid"><div><p class="eyebrow">BEZPŁATNA WYCENA</p><h2>Powiedz, co mamy wyczyścić.</h2><p>Opisz obiekt i zakres prac. W przypadku większych realizacji możesz przygotować zdjęcia — ułatwią wstępną ocenę zlecenia.</p></div><div class="contactBox"><a class="number" href="tel:+48535937367">535 937 367</a><a class="mail" href="mailto:biuro.pryzmatglass@gmail.com?subject=Wycena%20Pryzmat%20Glass">biuro.pryzmatglass@gmail.com</a><a class="primary black" href="mailto:biuro.pryzmatglass@gmail.com?subject=Wycena%20Pryzmat%20Glass">Poproś o wycenę →</a></div></div></section></main>
 <footer><div class="wrap foot"><img src="assets/images/logo.jpg" alt="Pryzmat Glass"><p>Mycie • Czyszczenie • Sprzątanie</p><p>© 2026 Pryzmat Glass</p></div></footer><script src="assets/app.js"></script></body></html>
