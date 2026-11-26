@@ -1,0 +1,48 @@
+/* Pryzmat Glass – Black Month 2026. All selectors scoped to bm-* components. */
+.bm-teaser{background:linear-gradient(110deg,#101722 0%,#1c2836 65%,#101722 100%);color:#fff;padding:20px 0;border-top:2px solid #bfa36a;border-bottom:2px solid #bfa36a}
+.bm-teaser-inner{width:min(1180px,calc(100% - 44px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.bm-teaser-copy{max-width:800px}
+.bm-teaser-eyebrow{display:block;color:#edcc89;letter-spacing:.12em;font-weight:800;font-size:12px;text-transform:uppercase;margin-bottom:5px}
+.bm-teaser strong{display:block;color:#fff;font-size:clamp(19px,2vw,28px);line-height:1.25}
+.bm-teaser p{margin:7px 0 0;color:#e1e5eb;line-height:1.5;font-size:14px}
+.bm-teaser-cta{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:#e4bb66;color:#111c2a;font-weight:800;border-radius:9px;padding:14px 22px;text-decoration:none}
+.bm-teaser-cta:hover,.bm-teaser-cta:focus-visible{background:#ffe1a4;color:#111c2a;outline-offset:3px}
+.bm-page{--bm-ink:#152336;--bm-gold:#e4bb66;--bm-gray:#647287;color:var(--bm-ink)}
+.bm-page .bm-hero{background:radial-gradient(circle at 86% 25%,#33465b 0%,#142131 40%,#0d1520 78%);color:#fff;padding:90px 0 96px;overflow:hidden}
+.bm-page .bm-hero-inner{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.7fr);gap:48px;align-items:center}
+.bm-page .bm-kicker{margin:0 0 16px;color:var(--bm-gold);font-size:14px;font-weight:800;letter-spacing:.17em}
+.bm-page .bm-hero h1{color:#fff;font-size:clamp(44px,6vw,80px);line-height:1.06;letter-spacing:-.045em;margin:0 0 23px}
+.bm-page .bm-hero h1 em{font-style:normal;color:var(--bm-gold)}
+.bm-page .bm-hero-lead{font-size:clamp(18px,2.2vw,23px);line-height:1.5;max-width:700px;color:#e1e7ef;margin:0 0 28px}
+.bm-page .bm-actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+.bm-page .bm-button{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:9px;background:var(--bm-gold);color:#132033;font-weight:800;text-decoration:none}
+.bm-page .bm-button:hover,.bm-page .bm-button:focus-visible{background:#ffe0a1}
+.bm-page .bm-link{color:#fff;text-decoration:underline;text-underline-offset:4px;font-weight:700}
+.bm-page .bm-small{font-size:13px;line-height:1.6;color:#dce3ea;margin:20px 0 0}
+.bm-page .bm-ticket{border:1px solid rgba(228,187,102,.45);background:rgba(255,255,255,.06);border-radius:20px;padding:33px;box-shadow:0 22px 60px rgba(0,0,0,.22)}
+.bm-page .bm-ticket small{color:#dbcbad;font-size:13px;letter-spacing:.1em}
+.bm-page .bm-ticket strong{display:block;font-size:clamp(32px,4vw,48px);margin:12px 0;color:#fff}
+.bm-page .bm-ticket p{color:#e4e8ee;line-height:1.55}
+.bm-page .bm-ticket hr{border:0;border-top:1px solid rgba(255,255,255,.22);margin:24px 0}
+.bm-page .bm-block{padding:78px 0}
+.bm-page .bm-block h2{font-size:clamp(30px,4vw,49px);margin:0 0 18px;letter-spacing:-.035em;line-height:1.12}
+.bm-page .bm-intro{max-width:840px;color:#526072;line-height:1.7;font-size:18px}
+.bm-page .bm-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.bm-page .bm-card{padding:28px;border:1px solid #dce2e9;background:#fff;border-radius:16px;box-shadow:0 9px 30px rgba(17,35,57,.05)}
+.bm-page .bm-card b{display:inline-flex;background:#f7e8ca;border-radius:8px;padding:8px 11px;font-size:14px;color:#69450c}
+.bm-page .bm-card h3{margin:22px 0 10px;font-size:22px;line-height:1.25}
+.bm-page .bm-card p{line-height:1.65;color:#4a596d;margin:0}
+.bm-page .bm-terms{background:#f5f7fa;padding:75px 0}
+.bm-page .bm-terms-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.bm-page .bm-term{background:#fff;border:1px solid #e1e6ec;border-radius:14px;padding:26px}
+.bm-page .bm-term h3{margin:0 0 11px;font-size:18px}
+.bm-page .bm-term p,.bm-page .bm-term li{color:#455469;line-height:1.65;margin:0}
+.bm-page .bm-term ul{margin:0;padding-left:20px}
+.bm-page .bm-footnote{font-size:14px;color:#526072;line-height:1.7;margin-top:25px}
+.bm-page .bm-contact{background:#12243a;color:#fff;padding:68px 0}
+.bm-page .bm-contact h2{color:#fff}
+.bm-page .bm-contact p{line-height:1.7;color:#e2e6eb}
+.bm-page .bm-contact a:not(.bm-button){color:#ffe0a1;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:800px){.bm-page .bm-hero-inner{grid-template-columns:1fr}.bm-page .bm-cards{grid-template-columns:1fr 1fr}.bm-page .bm-terms-list{grid-template-columns:1fr}.bm-teaser-inner{align-items:flex-start;flex-direction:column;gap:15px}}
+@media (max-width:590px){.bm-page .bm-hero{padding:60px 0}.bm-page .bm-block,.bm-page .bm-terms{padding:52px 0}.bm-page .bm-cards{grid-template-columns:1fr}.bm-page .bm-ticket{padding:25px}}
+@media (prefers-reduced-motion:no-preference){.bm-teaser-cta,.bm-page .bm-button{transition:background-color .18s ease,transform .18s ease}.bm-teaser-cta:hover,.bm-page .bm-button:hover{transform:translateY(-2px)}}
